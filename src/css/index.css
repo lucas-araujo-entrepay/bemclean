@@ -185,6 +185,9 @@ a:hover{
 	#opcoes-menu{
 		display: none;
 	}
+	.slides{
+		width: 100%;
+	}
 	.slider{
 		height: 150px;
 	}
@@ -210,9 +213,11 @@ a:hover{
 	}
 	.projetos{
 		flex-direction: column;
+		align-items: center;
 	}
 	.projeto{
-		width: 100%;
+		width: 50%;
+		font-size: 15px;
 	}
 	.rodape{
 		height: 80px;
