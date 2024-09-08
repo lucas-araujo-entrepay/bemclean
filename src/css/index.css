@@ -22,23 +22,20 @@ body, ul{
 }
 
 /*Estilizando o menu*/
-.menu{
+header{
 	display: flex;
-
 	margin-top: 2%;
 	padding: 0 10%;
-	justify-content: space-between;
 	align-items: center;
 	margin-bottom: 2%;
 }
-#logo{
-	display: flex;
-	justify-content: end;
+#opcoes-menu{
+	width: 100%;
 }
 #opcoes-menu ul{
 	display: flex;
+	justify-content: end;
 	list-style: none;
-	justify-content: space-around;
 }
 #opcoes-menu ul li{
 	position: relative;
@@ -108,7 +105,7 @@ body, ul{
 }
 
 /*definindo um espaco padrao para todo o conteudo*/
-.conteudo{
+main{
 	padding: 0 10%;
 }
 
@@ -162,26 +159,94 @@ a:hover{
 }
 
 /*rodape*/
-.rodape{
+footer{
 	padding-top: 2%;
 	text-align: center;
 	background: #454545;
 	height: 140px;
 }
-.rodape ul li{
+footer ul li{
 	display: inline;
 	margin-right: 15px;
 }
-.rodape p{
+footer p{
 	margin-top: 3%;
 	color: white;
 	text-decoration: bold;
 }
 
+/*menu mobile*/
+.opcoes-mobile{
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 0%;
+	overflow: hidden;
+	height: 100%;
+	background: #1a1878;
+	z-index: 9999;
+	transition: .2s;
+}
+.opcoes-mobile.abrir-opcoes{ /*abrindo menu*/
+	width: 70%;
+}
+.opcoes-mobile.abrir-opcoes ~ .overlay-menu{
+	display: block;
+}
+
+
+.opcoes-mobile p {
+	color: white;
+	margin-left: 5%;
+	font-size: 30px;
+	text-decoration: bold;
+}
+.opcoes-mobile a{
+	font-size: 25px;
+	color: white;
+	text-align: end;
+}
+.opcoes-mobile a:hover{
+	background: #0703ff;
+}
+.opcoes-mobile ul li{
+	list-style: none;
+	padding: 10% 10%;
+}
+.abrir-menu img{
+	width: 20%;
+	margin-left: 70%;
+	display: none;
+}
+.overlay-menu{
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: 8888;
+	background: #000000a7;
+	position: fixed;
+	display: none;
+}
+.abrir{
+	display: block;
+}
+.fechar{
+	display: none;
+}
 
 
 /*Responsividade*/
 @media (max-width: 950px){
+	.contato{
+		padding-right: 5%;
+	}
+	.abrir-menu img{
+		display: block;
+	}
+	#logo img{
+		width: 80%;
+	}
 	#opcoes-menu{
 		display: none;
 	}
@@ -189,11 +254,10 @@ a:hover{
 		width: 100%;
 	}
 	.slider{
-		height: 150px;
+		height: 200px;
 	}
 	.slides img{
-		width: 100%;
-		height: 150px;
+		height: 200px;
 	}
 	h1{
 		text-align: center;
@@ -219,7 +283,10 @@ a:hover{
 		width: 50%;
 		font-size: 15px;
 	}
-	.rodape{
+	footer{
 		height: 80px;
+	}
+	footer ul li{
+		margin-right: 10px;
 	}
 }
