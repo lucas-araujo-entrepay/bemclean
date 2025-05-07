@@ -10,7 +10,7 @@ body, ul{
 /*parte de contato*/
 .contato{
 	display: flex;
-	background: #020083;
+	background: #428780;
 	justify-content: end;
 	align-items: center;
 	padding-right: 10%;
@@ -51,8 +51,8 @@ header{
 .sub-menu, .sub-menu2{
 	display: none;
 	position: absolute;
-	width: 120%;
-	background: #020083;
+	width: 120px;
+	background: #428780;
 	box-shadow: 0px 1px 5px darkblue;
 	z-index: 1;
 }
@@ -72,7 +72,7 @@ header{
 	text-decoration: bold;
 }
 .sub-menu ul li:hover{
-	background: #0703ff;
+	background: #428720;
 }
 .sub-menu a:hover{
 	opacity: 100%;
@@ -114,6 +114,7 @@ main{
 	display: flex;
 	margin-bottom: 2%;
 	justify-content: space-between;
+	text-align:justify
 }
 .metade{
 	&:not(:last-child){
@@ -128,6 +129,11 @@ main{
 }
 .metade ul li{
 	margin-left: 5%;
+	margin-bottom:3%;
+}
+
+.metade img{
+	width: 330px;
 }
 
 /*projetos*/
@@ -281,12 +287,13 @@ footer p{
 	}
 	.projeto{
 		width: 50%;
-		font-size: 15px;
+		font-size: 25px;
 	}
+	
 	footer{
 		height: 80px;
 	}
+	
 	footer ul li{
 		margin-right: 10px;
 	}
-}
